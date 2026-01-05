@@ -1,0 +1,206 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbmv8752rk1gw"]
+
+[ext_resource type="Script" uid="uid://tcyfd4csri4" path="res://Interacao/Animacoes/Escrivaninha/InteractableDesk.gd" id="1_3ocro"]
+[ext_resource type="ArrayMesh" uid="uid://c1t14qqv11vp4" path="res://Interacao/Animacoes/Escrivaninha/obj/porta/Escrivaninha.obj" id="3_wyt7k"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_58b35"]
+data = PackedVector3Array(0.19999999, 0.22299999, -0.1625, 0.19999999, 0.22299999, -0.1937, 0.19999999, 0.1405, -0.1625, 0.19999999, 0.1405, -0.1625, 0.19999999, 0.22299999, -0.1937, 0.19999999, 0.1405, -0.1937, 0.1856, 0.22299999, -0.1625, 0.1856, 0.1405, -0.1625, 0.1856, 0.22299999, -0.1937, 0.1856, 0.22299999, -0.1937, 0.1856, 0.1405, -0.1625, 0.1856, 0.1405, -0.1937, 0.19999999, 0.22299999, -0.1625, 0.1856, 0.22299999, -0.1625, 0.19999999, 0.22299999, -0.1937, 0.19999999, 0.22299999, -0.1937, 0.1856, 0.22299999, -0.1625, 0.1856, 0.22299999, -0.1937, 0.19999999, 0.1405, -0.1625, 0.19999999, 0.1405, -0.1937, 0.1856, 0.1405, -0.1625, 0.1856, 0.1405, -0.1625, 0.19999999, 0.1405, -0.1937, 0.1856, 0.1405, -0.1937, 0.19999999, 0.22299999, -0.1625, 0.19999999, 0.1405, -0.1625, 0.1856, 0.22299999, -0.1625, 0.1856, 0.22299999, -0.1625, 0.19999999, 0.1405, -0.1625, 0.1856, 0.1405, -0.1625, 0.19999999, 0.22299999, -0.1937, 0.1856, 0.22299999, -0.1937, 0.19999999, 0.1405, -0.1937, 0.19999999, 0.1405, -0.1937, 0.1856, 0.22299999, -0.1937, 0.1856, 0.1405, -0.1937, 0.2188, 0.2656, -0.14999999, 0.2188, 0.2656, -0.175, 0.2188, 0.0594, -0.14999999, 0.2188, 0.0594, -0.14999999, 0.2188, 0.2656, -0.175, 0.2188, 0.0594, -0.175, -0.0063, 0.2656, -0.14999999, -0.0063, 0.0594, -0.14999999, -0.0063, 0.2656, -0.175, -0.0063, 0.2656, -0.175, -0.0063, 0.0594, -0.14999999, -0.0063, 0.0594, -0.175, 0.2188, 0.2656, -0.14999999, -0.0063, 0.2656, -0.14999999, 0.2188, 0.2656, -0.175, 0.2188, 0.2656, -0.175, -0.0063, 0.2656, -0.14999999, -0.0063, 0.2656, -0.175, 0.2188, 0.0594, -0.14999999, 0.2188, 0.0594, -0.175, -0.0063, 0.0594, -0.14999999, -0.0063, 0.0594, -0.14999999, 0.2188, 0.0594, -0.175, -0.0063, 0.0594, -0.175, 0.2188, 0.2656, -0.14999999, 0.2188, 0.0594, -0.14999999, -0.0063, 0.2656, -0.14999999, -0.0063, 0.2656, -0.14999999, 0.2188, 0.0594, -0.14999999, -0.0063, 0.0594, -0.14999999, 0.2188, 0.2656, -0.175, -0.0063, 0.2656, -0.175, 0.2188, 0.0594, -0.175, 0.2188, 0.0594, -0.175, -0.0063, 0.2656, -0.175, -0.0063, 0.0594, -0.175)
+
+[sub_resource type="Animation" id="Animation_1kse3"]
+resource_name = "abrir_porta"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Porta/colisao_porta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.44066203, 0.0029088855, 0), Vector3(-0.3, 0.003, -0.079)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Porta/colisao_porta:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0121998545, 0), Vector3(0, 1.0629056, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Modelo_porta:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.44066203, 0.0029088855, 0), Vector3(-0.29989216, 0.0029088855, -0.079490304)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Modelo_porta:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0121998545, 0), Vector3(0, 1.0637606, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lwsie"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Porta/colisao_porta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.44066203, 0.0029088855, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Porta/colisao_porta:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.0121998545, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Modelo_porta:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.44066203, 0.0029088855, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Modelo_porta:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.0121998545, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8lhnu"]
+resource_name = "fechar_porta"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Modelo_porta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.29989216, 0.0029088855, -0.079490304), Vector3(-0.441, 0.003, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Modelo_porta:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.0637606, 0), Vector3(0, -0.012217305, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Porta/colisao_porta:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.3, 0.003, -0.079), Vector3(-0.441, 0.003, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Porta/colisao_porta:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.0629056, 0), Vector3(0, -0.012217305, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ybjcf"]
+_data = {
+&"RESET": SubResource("Animation_lwsie"),
+&"abrir_porta": SubResource("Animation_1kse3"),
+&"fechar_porta": SubResource("Animation_8lhnu")
+}
+
+[node name="Porta_escrivaninha" type="Node3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+script = ExtResource("1_3ocro")
+
+[node name="Porta" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="colisao_porta" type="CollisionShape3D" parent="Porta"]
+transform = Transform3D(0.9999255, 0, -0.012199551, 0, 1, 0, 0.012199551, 0, 0.9999255, -0.44066203, 0.0029088855, 0)
+shape = SubResource("ConcavePolygonShape3D_58b35")
+
+[node name="label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 10.0
+anchor_top = 7.2500005
+anchor_right = 17.425001
+anchor_bottom = 8.312
+offset_top = -3.0517578e-05
+offset_right = -6.1035156e-05
+offset_bottom = 0.019989014
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ybjcf")
+}
+
+[node name="Modelo_porta" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9999253, 0, -0.012199549, 0, 1, 0, 0.012199549, 0, 0.9999253, -0.44066203, 0.0029088855, 0)
+mesh = ExtResource("3_wyt7k")
