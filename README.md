@@ -32,10 +32,10 @@ Preso em um único cômodo, o jogador deve **explorar o ambiente**, coletar iten
 ## 👥 Equipe
 Projeto desenvolvido em grupo como parte da disciplina de Computação Gráfica.
 
-- Fernanda Kersevan  
+- [Fernanda Kersevan - fernandakersevan](https://github.com/fernandakersevan) 
 - [Israel Belchior - 1nventors](https://github.com/1nventors) 
-- [Lívia Ferné - liviaferne](https://github.com/liviaferne) 
-- Walléria Siqueira
+- [Lívia Ferné - liviaferne](https://github.com/liviaferne)
+- [Walléria Siqueira - 832honey](https://github.com/832honey) 
 
 ---
 
