@@ -17,15 +17,15 @@ Preso em um único cômodo, o jogador deve **explorar o ambiente**, coletar iten
 ---
 
 ## 🎮 Demonstrações
-![quarto](https://github.com/user-attachments/assets/b9128929-75cc-4d9c-b6bf-86c28e3d35f3)
+![quarto](GIFS/quarto.gif)
 
 <br>
 
-![display](https://github.com/user-attachments/assets/4db80545-d62b-4b1f-9d91-3377895d0be9)
+![display](GIFS/display.gif)
 
 <br>
 
-![banheiro](https://github.com/user-attachments/assets/df41a0f9-e9ef-408c-b623-736cf0e45be8)
+![banheiro](GIFS/banheiro.gif)
 
 ---
 
