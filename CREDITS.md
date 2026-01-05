@@ -1,6 +1,44 @@
-# Créditos e Assets Externos
+# Referências e Materiais de Apoio
 
-Este projeto utiliza assets externos exclusivamente para fins educacionais e não comerciais.
+Este projeto foi desenvolvido com base em estudos, tutoriais e assets públicos, utilizados exclusivamente para fins educacionais e não comerciais. Partes da implementação foram estudadas e adaptadas a partir das seguintes fontes:
+
+## 📚 Tutoriais e Guias Técnicos
+- **Brackeys – How to Make 3D Games in Godot**  
+  https://www.youtube.com/watch?v=ke5KpqcoiIU
+
+- **Auger Gaming – Make a Keypad Lock in Godot 4**  
+  https://www.youtube.com/watch?v=stS8Kwqfa4Q
+
+- **Bonkahe – Basic Inventory System (Godot 4.x)**  
+  https://www.youtube.com/watch?v=XLjCmdy8jdw
+
+- **Naxes – Door Interactions in Godot Engine 4**  
+  https://www.youtube.com/watch?v=EWsW8BZ2DWo
+
+- **Robottobani – Godot 4 Main Menu Tutorial**  
+  https://www.youtube.com/watch?v=29jCe-mjyKQ
+
+- **Venex Source – Simple Countdown Timer in Godot**  
+  https://www.youtube.com/watch?v=ejRXpRlFa_Y
+
+- **Godot Guru – Colored Material with Transparency**  
+  https://www.youtube.com/shorts/jXjStWIHEII
+
+## 🛠️ Código e Repositórios
+- **Brackeys Proto Controller (Godot)**  
+  https://github.com/Brackeys/brackeys-proto-controller
+
+## 📖 Documentação Oficial
+- **Godot Engine Documentation**  
+  https://docs.godotengine.org/
+
+## 📘 Referência Teórica
+- SHIRLEY, Peter; MARSCHNER, Steve; et al.  
+  *Fundamentals of Computer Graphics*. 3ª ed. Boca Raton: A K Peters/CRC Press, 2009.
+
+<br>
+
+# Créditos e Assets Externos
 
 ## 🎨 Modelos 3D e Materiais
 - **Kanna-Nakajima - Modular Doll House – Memory Doll House** <br>
@@ -14,6 +52,9 @@ Este projeto utiliza assets externos exclusivamente para fins educacionais e nã
 
 - **Fanny Ngo - Hand Monster**  
   https://sketchfab.com/3d-models/hand-monster-4f709306703b4fb58db157dd8c3d8d55
+
+- **CLfanmodel - Coraline Doll** <br>
+  https://sketchfab.com/3d-models/coraline-doll-ea700637fb28471299b8b54639a0114e
 
 ## 🌊 Efeitos Visuais
 - **FourGames - Water & Waterfall + Foam (Godot Tutorial)**  
@@ -44,4 +85,4 @@ Sons adicionais utilizados a partir de vídeos do YouTube:
 
 <br>
 
-> ⚠️ Todos os sons provenientes do YouTube foram utilizados exclusivamente para fins educacionais, sem finalidade comercial. Caso algum detentor de direitos solicite remoção, o conteúdo será prontamente ajustado.
+> ⚠️ Todos os sons provenientes do YouTube foram utilizados exclusivamente para fins educacionais, sem finalidade comercial. Caso algum detentor de direitos solicite a remoção, o conteúdo será prontamente ajustado.
