@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bes5ylnv1xkne"]
+
+[ext_resource type="Script" uid="uid://c4jgetefbsuee" path="res://Interacao/Timer/timer.gd" id="1_bmsml"]
+
+[node name="Timer" type="Node"]
+script = ExtResource("1_bmsml")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -139.0
+offset_top = 31.0
+offset_right = -40.0
+offset_bottom = 100.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true

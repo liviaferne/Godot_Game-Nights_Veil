@@ -1,0 +1,253 @@
+[gd_scene load_steps=28 format=3 uid="uid://bs72ogkvdd7d6"]
+
+[ext_resource type="Script" uid="uid://ddtr8s2cuqog8" path="res://Interacao/Player/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="Script" uid="uid://m4j57pglwoy5" path="res://Interacao/Player/see_cast.gd" id="2_wr06p"]
+[ext_resource type="Script" uid="uid://cjug728cl6045" path="res://Interacao/Player/Interaction/PlayerInteractionHandler.gd" id="3_sc81y"]
+[ext_resource type="Script" uid="uid://ehrlp24ax85p" path="res://Interacao/Inventario/ItemData.gd" id="4_8w4db"]
+[ext_resource type="Texture2D" uid="uid://exxoly2bt6bo" path="res://addons/Captura de tela 2025-11-17 214153.png" id="5_hmtto"]
+[ext_resource type="PackedScene" uid="uid://qrnp12vkaftt" path="res://Interacao/Inventario/Itens_interagiveis/Lanterna/lanterna.tscn" id="6_q4lp5"]
+[ext_resource type="Texture2D" uid="uid://cqtwy1wk16vml" path="res://addons/cartas.png" id="7_3fm7o"]
+[ext_resource type="PackedScene" uid="uid://b3dg051lmil3l" path="res://Interacao/Inventario/Itens_interagiveis/Carta/carta.tscn" id="8_4jg2l"]
+[ext_resource type="Texture2D" uid="uid://c3wnf80wkhyg3" path="res://addons/chave.png" id="9_1gymf"]
+[ext_resource type="PackedScene" uid="uid://bem87f8a24hn6" path="res://Interacao/Inventario/Itens_interagiveis/Chave/chave.tscn" id="10_6vl8l"]
+[ext_resource type="PackedScene" uid="uid://62fmsaw7dkyp" path="res://Interacao/Inventario/Itens_interagiveis/Carta/carta2.tscn" id="13_l6y2x"]
+[ext_resource type="Script" uid="uid://cefor05wdc0op" path="res://Interacao/Inventario/Itens_interagiveis/Carta/CardItemData.gd" id="13_rytw7"]
+[ext_resource type="PackedScene" uid="uid://4cngoi84ops" path="res://Interacao/Inventario/Itens_interagiveis/Carta/carta3.tscn" id="14_1gymf"]
+[ext_resource type="Texture2D" uid="uid://c5o8hn5333060" path="res://addons/torneira.png" id="15_0vglq"]
+[ext_resource type="PackedScene" uid="uid://cmaj3m1belapb" path="res://Interacao/Inventario/Itens_interagiveis/Peca_torneira/peca_torneira.tscn" id="16_0jad7"]
+[ext_resource type="Script" uid="uid://ucfpncrx3enu" path="res://Interacao/Inventario/InventoryHandler.gd" id="16_rytw7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
+albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucva2"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
+radius = 0.4
+height = 1.762793
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a7e1g"]
+radius = 1.0952456
+
+[sub_resource type="Resource" id="Resource_rytw7"]
+script = ExtResource("4_8w4db")
+ItemName = "Lanterba"
+ItemModelPrefab = ExtResource("6_q4lp5")
+Icon = ExtResource("5_hmtto")
+metadata/_custom_type_script = "uid://ehrlp24ax85p"
+
+[sub_resource type="Resource" id="Resource_4jg2l"]
+script = ExtResource("4_8w4db")
+ItemName = "Chave"
+ItemModelPrefab = ExtResource("10_6vl8l")
+Icon = ExtResource("9_1gymf")
+metadata/_custom_type_script = "uid://ehrlp24ax85p"
+
+[sub_resource type="Resource" id="Resource_6vl8l"]
+script = ExtResource("4_8w4db")
+ItemName = "Torneira"
+ItemModelPrefab = ExtResource("16_0jad7")
+Icon = ExtResource("15_0vglq")
+metadata/_custom_type_script = "uid://ehrlp24ax85p"
+
+[sub_resource type="Resource" id="Resource_5ix3r"]
+script = ExtResource("13_rytw7")
+CardText = "Meu Diário, Dia 14
+
+Não devia ter olhado para o espelho quando a luz se foi. Entrar no escuro foi um erro. Agora a noite não acaba, e a cada vez que fecho os olhos, eles estão lá.
+
+Eles cochicham promes🚫as vazias, mas sinto que querem algo terrível de mim. Eles me observam do canto do quarto, misturados às sombras das roupas.
+O pior são os olhos. Têm olhos que parecem entalhados no frio, vazios, sem pálp💢bras, como pedra de cemitério. São buracos negros que sugam toda a cor e o barulho do mundo.
+
+A Vovó diz que é só minha cabeça. Mas sei que eles querem que eu assuma a versão mais fraca de mim. Dizem que só ass❓m a gente encontra a força, mas eu sei que é mentira.
+Tenho medo. Se isso acontecer, não vou conseguir sair deste quarto nunca mais. É horrível não poder ser sempre inocente, sempre apena💔 uma criança."
+ItemName = "Carta1"
+ItemModelPrefab = ExtResource("8_4jg2l")
+Icon = ExtResource("7_3fm7o")
+metadata/_custom_type_script = "uid://cefor05wdc0op"
+
+[sub_resource type="Resource" id="Resource_ps0b4"]
+script = ExtResource("13_rytw7")
+CardText = "O Enigma do Limiar
+
+Pense nas criaturas que nos veem melhor no escuro. Elas têm presas, garras, e caçam em silêncio.
+
+Quantos são os olhos que te encaram da escuridão antes que você Sinta o medo?
+
+Quantos são os lados da moeda que decide se você vive ou morre?
+
+Quantas são as faces que separam seu Espelho da verdade?
+
+Quantas são as mãos que alcançam seu Inocente sono?
+
+A resposta está na Conta dos Olhos."
+ItemName = "Carta2"
+ItemModelPrefab = ExtResource("13_l6y2x")
+Icon = ExtResource("7_3fm7o")
+metadata/_custom_type_script = "uid://cefor05wdc0op"
+
+[sub_resource type="Resource" id="Resource_0vglq"]
+script = ExtResource("13_rytw7")
+CardText = "A Ordem das Lamentações
+
+A chave para o tempo final está em cinco verdades que você já recolheu. Um passo em falso, e o ciclo se repete. Siga a sequência para honrar o limiar.
+
+1. A Fonte: Onde o corpo foi lavado pela última vez. O segredo está no fundo frio da banheira, sob a água escura.
+2. O Olhar: A mensagem de metal que a escuridão esconde. Use a luz da sua mão para ver, através do vidro embaciado, ao lado de onde você dorme.
+3. O Sussurro: A dor do diário, a palavra de quatro letras que eles gritaram no escuro.
+4. O Reflexo: A resposta da dualidade e da sombra, o número que define o par. A conta que está nos olhos do medo.
+5. O Preço: O número que define o seu valor. Responda, com apenas um dígito, e avance: Quantas vidas você tem?"
+ItemName = "Carta3"
+ItemModelPrefab = ExtResource("14_1gymf")
+Icon = ExtResource("7_3fm7o")
+metadata/_custom_type_script = "uid://cefor05wdc0op"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6y2x"]
+bg_color = Color(0.17641908, 0.17641911, 0.17641899, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="Jogador" type="CharacterBody3D"]
+collision_mask = 3
+script = ExtResource("1_ucva2")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_iof21")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_ucva2")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9186035, 0)
+shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="SeeCast" type="RayCast3D" parent="Head/Camera3D"]
+unique_name_in_owner = true
+transform = Transform3D(5.251973e-06, 0.0018136561, 0.99887145, 1.0156326, -0.025132112, 3.7328296e-12, 0.008597387, 2.9689226, -0.0006101908, 0, -0.13244629, 0)
+collision_mask = 7
+collide_with_areas = true
+script = ExtResource("2_wr06p")
+
+[node name="HandMount" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43423635, -0.47599375, -1.1429608)
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0426791, 0)
+shape = SubResource("SphereShape3D_a7e1g")
+
+[node name="PlayerInteractionHandler" type="Node" parent="."]
+script = ExtResource("3_sc81y")
+ItemTypes = Array[ExtResource("4_8w4db")]([SubResource("Resource_rytw7"), SubResource("Resource_4jg2l"), SubResource("Resource_6vl8l"), SubResource("Resource_5ix3r"), SubResource("Resource_ps0b4"), SubResource("Resource_0vglq")])
+
+[node name="InventoryUI" type="Control" parent="." node_paths=PackedStringArray("PlayerBody", "InventoryGrid", "HandMount")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_force_pass_scroll_events = false
+script = ExtResource("16_rytw7")
+PlayerBody = NodePath("..")
+InventoryGrid = NodePath("Panel/MarginContainer/GridContainer")
+HandMount = NodePath("../Head/Camera3D/HandMount")
+
+[node name="Panel" type="Panel" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -242.25
+offset_top = -70.0
+offset_right = 242.25
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l6y2x")
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 10
+
+[node name="FloatingHintLabel" type="Label" parent="InventoryUI"]
+visible = false
+layout_mode = 0
+offset_left = -164.0
+offset_top = -11.0
+offset_right = 162.0
+offset_bottom = 13.0
+
+[node name="CardReaderUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 217.0
+offset_top = 88.0
+offset_right = -201.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CardReaderUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardContentLabel" type="Label" parent="CardReaderUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+autowrap_mode = 3
+
+[connection signal="body_entered" from="InteractionArea" to="PlayerInteractionHandler" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="PlayerInteractionHandler" method="_on_interaction_area_body_exited"]
+[connection signal="OnItemPickedUp" from="PlayerInteractionHandler" to="InventoryUI" method="PickupItem"]

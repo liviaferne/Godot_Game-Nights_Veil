@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqbq35ym2xsbd"]
+
+[ext_resource type="Script" uid="uid://dayfcimsgg74c" path="res://Interacao/Menu/main_menu.gd" id="1_5ulcw"]
+[ext_resource type="Texture2D" uid="uid://dtwpgng557vw3" path="res://Interacao/Menu/menu_principal.png" id="2_ju3qp"]
+
+[node name="Main_menu" type="Node2D"]
+script = ExtResource("1_5ulcw")
+metadata/_edit_vertical_guides_ = [0.0, 1925.0, 959.0]
+metadata/_edit_horizontal_guides_ = [-3.0, 1082.0, 539.0]
+
+[node name="MenuPrincipal" type="Sprite2D" parent="."]
+position = Vector2(959.5, 540.5)
+scale = Vector2(1.4992187, 1.5041667)
+texture = ExtResource("2_ju3qp")
+
+[node name="Botoes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Iniciar" type="Button" parent="Botoes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 773.0
+offset_top = 614.0
+offset_right = 1106.0
+offset_bottom = 721.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "Iniciar"
+
+[node name="Sair" type="Button" parent="Botoes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 769.0
+offset_top = 738.0
+offset_right = 1110.0
+offset_bottom = 849.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "Sair"
+
+[node name="Fundo" type="Node" parent="."]
+
+[connection signal="pressed" from="Botoes/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Botoes/Sair" to="." method="_on_sair_pressed"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvpxb0wwsidd1"]
+
+[ext_resource type="Script" uid="uid://cjdvvfur6y14g" path="res://Interacao/Menu/escapou.gd" id="1_fuiv1"]
+[ext_resource type="Texture2D" uid="uid://qvts1rib6paq" path="res://Interacao/Menu/escapou.png" id="2_vyknr"]
+
+[node name="Escapou" type="Node2D"]
+script = ExtResource("1_fuiv1")
+metadata/_edit_horizontal_guides_ = [1081.0, 538.0]
+metadata/_edit_vertical_guides_ = [1917.0, 960.0]
+
+[node name="Escapou" type="Sprite2D" parent="."]
+position = Vector2(959, 540)
+texture = ExtResource("2_vyknr")
+
+[node name="Botoes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Retornar" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 632.0
+offset_right = 1127.0
+offset_bottom = 745.0
+theme_override_font_sizes/font_size = 42
+text = "Retornar"
+
+[connection signal="pressed" from="Botoes/Retornar" to="." method="_on_retornar_pressed"]

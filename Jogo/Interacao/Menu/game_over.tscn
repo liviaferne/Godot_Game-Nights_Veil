@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bav2aetsrjvlk"]
+
+[ext_resource type="Script" uid="uid://8psqnsvlhb5i" path="res://Interacao/Menu/game_over.gd" id="1_lxcon"]
+[ext_resource type="Texture2D" uid="uid://cjf8drb33jehj" path="res://Interacao/Menu/game_over.png" id="2_40qf8"]
+
+[node name="Game_over" type="Node2D"]
+script = ExtResource("1_lxcon")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_40qf8")
+
+[node name="Botoes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Retornar" type="Button" parent="Botoes"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 632.0
+offset_right = 1125.0
+offset_bottom = 743.0
+theme_override_font_sizes/font_size = 42
+text = "Retornar"
+
+[connection signal="pressed" from="Botoes/Retornar" to="." method="_on_retornar_pressed"]
