@@ -1,0 +1,19 @@
+# Godot 4.x
+.godot/
+.import/
+.export/
+
+# Godot-specific
+*.translation
+*.generated
+
+# Logs
+*.log
+
+# Temporários
+*.tmp
+*.cache
+
+# SO
+.DS_Store
+Thumbs.db
