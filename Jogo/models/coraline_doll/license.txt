@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coraline Doll
+* source:	https://sketchfab.com/3d-models/coraline-doll-ea700637fb28471299b8b54639a0114e
+* author:	CLfanmodel (https://sketchfab.com/jamescontreras2001)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coraline Doll" (https://sketchfab.com/3d-models/coraline-doll-ea700637fb28471299b8b54639a0114e) by CLfanmodel (https://sketchfab.com/jamescontreras2001) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
