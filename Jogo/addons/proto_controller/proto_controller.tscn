@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs72ogkvdd7d6"]
+
+[ext_resource type="Script" uid="uid://ddtr8s2cuqog8" path="res://Interacao/Player/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="Script" uid="uid://m4j57pglwoy5" path="res://Interacao/Player/see_cast.gd" id="2_wr06p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
+albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucva2"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
+radius = 0.4
+height = 1.8
+
+[node name="Jogador" type="CharacterBody3D"]
+script = ExtResource("1_ucva2")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_iof21")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_ucva2")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="SeeCast" type="RayCast3D" parent="Head/Camera3D"]
+unique_name_in_owner = true
+transform = Transform3D(5.254991e-06, 0.001982727, 0.99883014, 1.0162163, -0.027474958, 3.732675e-12, 0.008602327, 3.2456892, -0.0006101656, 0, -0.13244629, 0)
+script = ExtResource("2_wr06p")

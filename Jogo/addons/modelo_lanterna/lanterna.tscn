@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c55clknsgm7gt"]
+
+[ext_resource type="Script" uid="uid://ce72fiyq113by" path="res://addons/modelo_lanterna/lanterna.gd" id="1_dimul"]
+[ext_resource type="PackedScene" uid="uid://nb7e6danjaq4" path="res://models/Lanterna/lanterna.gltf" id="2_na0mr"]
+
+[node name="Lanterna" type="Node3D"]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+script = ExtResource("1_dimul")
+
+[node name="Lanterna" parent="." instance=ExtResource("2_na0mr")]
+transform = Transform3D(0.2, 0, 0, 0, -0.00016754546, 0.19999993, 0, -0.19999993, -0.00016754546, 0.20701134, 0.1282273, 0.07986145)
+
+[node name="Luz" type="SpotLight3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0.20701134, 0.1282273, -0.0800266)
+light_energy = 0.0
+spot_range = 10.0
+spot_angle = 30.0
+script = ExtResource("1_dimul")
+
+[node name="Bateria" type="ProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -13.5
+offset_right = 159.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1000.0
+step = 1.0
+value = 1000.0
+
+[editable path="Lanterna"]

@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4r6dwdiiqqn0"]
+
+[ext_resource type="PackedScene" uid="uid://bwp4qw4gve7kj" path="res://Addons/proto_controller/modelo_lanterna/player.tscn" id="1_c2pr3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j6rp"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7sbyd"]
+sky_material = SubResource("ProceduralSkyMaterial_8j6rp")
+
+[sub_resource type="Environment" id="Environment_d62wj"]
+background_mode = 2
+sky = SubResource("Sky_7sbyd")
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.053043038, 0.053407483, 0.1110928, 1)
+fog_light_energy = 16.0
+fog_sun_scatter = 0.08
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.2259
+volumetric_fog_albedo = Color(0.20602253, 0.18842348, 0.20202878, 1)
+volumetric_fog_length = 66.07
+volumetric_fog_ambient_inject = 0.29
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr5tt"]
+albedo_color = Color(0.09019608, 0.16862746, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7461"]
+albedo_color = Color(0.45394975, 0.20426857, 0.13554424, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djfau"]
+albedo_color = Color(0.21428645, 0.41921994, 0.20085597, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d62wj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.14536837, 0.01645879, 0.3664941, 1)
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+sky_mode = 2
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_rr5tt")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8064623, 0, 0, 0, 7.1643186, 0, 0, 0, 3.8440137, -19.077848, 3.5404873, 31.164595)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, -28.585693, 3.343217, -6.081217)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D2"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, -9.859262, 4.6395187, 3.1412888)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D3"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, 5.4348936, 3.6834679, 31.612358)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D4"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, 27.784286, 3.2105541, 21.63639)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D5"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, 37.90443, 3.330456, -6.0237575)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D6"]
+transform = Transform3D(2.2523828, 0, 0, 0, 1.1867404, 0, 0, 0, 3, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(4.8, 0, 0, 0, 7.16, 0, 0, 0, 3.4, 5.5441732, 3.9108524, -26.87136)
+material = SubResource("StandardMaterial3D_e7461")
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="CSGCombiner3D/CSGCylinder3D7"]
+transform = Transform3D(2.2809951, 0, 0, 0, 0.802661, 0, 0, 0, 2.3480625, 0, 1.1753764, 0)
+material = SubResource("StandardMaterial3D_djfau")
+
+[node name="Player" parent="." instance=ExtResource("1_c2pr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.726336, 1.6925607, -6.1631837)
