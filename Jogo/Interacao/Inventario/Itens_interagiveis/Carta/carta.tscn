@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=4 uid="uid://b3dg051lmil3l"]
+
+[ext_resource type="Script" uid="uid://gixh4yijqcx8" path="res://Interacao/Inventario/InteractableItem.gd" id="1_3jjc3"]
+[ext_resource type="ArrayMesh" uid="uid://cehlcjxxgh2nd" path="res://Interacao/Inventario/Itens_interagiveis/Carta/obj/Carta.obj" id="1_n4r6d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3jjc3"]
+size = Vector3(0.6331205, 0.032958984, 0.6694399)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p7tcf"]
+_surfaces = [{
+"aabb": AABB(-0.42406508, 0.0061014974, -0.5683192, 0.84813005, 0.015922006, 1.1148232),
+"attribute_data": PackedByteArray("AAAAAAAAAACQsI89AAAAAAAAAADPYE89kLCPPc9gTz2QsI89AAAAAJCwjz3PYE89AAAAAAAAAAAAAAAAz2BPPZCwjz3PYM89AAAAAM9gzz2QsI89AAAAAAAAAAAAAAAAkLCPPQAAAACQsI89z2DPPQAAAAAAAAAAAAAAAM9gzz2QsI89AAAAAJCwjz3PYE89AAAAAAAAAAAAAAAAz2BPPQAAAAAAAAAAkLCPPQAAAAAAAAAAz2BPPZCwjz3PYE89AAAAAAAAAAChaKE9AAAAAAAAAADSAFI9oWihPdIAUj2haKE9AAAAAKFooT3SAFI9AAAAAAAAAAAAAAAA0gBSPaFooT3SCNI9AAAAANII0j2haKE9AAAAAAAAAAAAAAAAoWihPQAAAAChaKE90gjSPQAAAAAAAAAAAAAAANII0j2haKE9AAAAAKFooT3SAFI9AAAAAAAAAAAAAAAA0gBSPQAAAAAAAAAAoWihPQAAAAAAAAAA0gBSPaFooT3SAFI9"),
+"format": 34359742487,
+"index_count": 72,
+"index_data": PackedByteArray("AAACAAEAAgADAAEABAAGAAUABgAHAAUACAAKAAkACgALAAkADAAOAA0ADgAPAA0AEAASABEAEgATABEAFAAWABUAFgAXABUAGAAaABkAGgAbABkAHAAeAB0AHgAfAB0AIAAiACEAIgAjACEAJAAmACUAJgAnACUAKAAqACkAKgArACkALAAuAC0ALgAvAC0A"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("zgCaPgjRmjyw5ws/Cx/ZPgjRmjwIP+q+zgCaPhLvxzuw5ws/Cx/ZPhLvxzsIP+q+Dx/ZvgjRmjzZPOo+Dx/ZvhLvxzvZPOo+fgKavgjRmjyu5wu/fgKavhLvxzuu5wu/zgCaPgjRmjyw5ws/Dx/ZvgjRmjzZPOo+Cx/ZPgjRmjwIP+q+fgKavgjRmjyu5wu/zgCaPhLvxzuw5ws/Cx/ZPhLvxzsIP+q+Dx/ZvhLvxzvZPOo+fgKavhLvxzuu5wu/zgCaPgjRmjyw5ws/zgCaPhLvxzuw5ws/Dx/ZvgjRmjzZPOo+Dx/ZvhLvxzvZPOo+Cx/ZPgjRmjwIP+q+fgKavgjRmjyu5wu/Cx/ZPhLvxzsIP+q+fgKavhLvxzuu5wu/bHLPPqJqtDyQ2uI+MmjGPqJqtDxefRG/bHLPPrwqFzyQ2uI+MmjGPrwqFzxefRG/q2mmvqJqtDwgYek+q2mmvrwqFzwgYek+bHKvvqJqtDwWOg6/bHKvvrwqFzwWOg6/bHLPPqJqtDyQ2uI+q2mmvqJqtDwgYek+MmjGPqJqtDxefRG/bHKvvqJqtDwWOg6/bHLPPrwqFzyQ2uI+MmjGPrwqFzxefRG/q2mmvrwqFzwgYek+bHKvvrwqFzwWOg6/bHLPPqJqtDyQ2uI+bHLPPrwqFzyQ2uI+q2mmvqJqtDwgYek+q2mmvrwqFzwgYek+MmjGPqJqtDxefRG/bHKvvqJqtDwWOg6/MmjGPrwqFzxefRG/bHKvvrwqFzwWOg6//PH/f/7//vj88f9//v/++Pzx/3/+//74/PH/f/7//vgAAAFyAXL/vwAAAXIBcv+/AAABcgFy/78AAAFyAXL/vwCA/f/+8f6/AID9//7x/r8AgP3//vH+vwCA/f/+8f6/AIAAAADy/78AgAAAAPL/vwCAAAAA8v+/AIAAAADy/78Ccv9/AfL/vwJy/38B8v+/AnL/fwHy/78Ccv9/AfL/v/7//fEAAP/G/v/98QAA/8b+//3xAAD/xv7//fEAAP/G/v8xggAA5v7+/zGCAADm/v7/MYIAAOb+/v8xggAA5v4zAv9/MoL/vzMC/38ygv+/MwL/fzKC/78zAv9/MoL/vwGA/f/9/+W+AYD9//3/5b4BgP3//f/lvgGA/f/9/+W+AIABAP7/GMEAgAEA/v8YwQCAAQD+/xjBAIABAP7/GMEwgv9//v8XwTCC/3/+/xfBMIL/f/7/F8Ewgv9//v8XwQAANQI1Av+/AAA1AjUC/78AADUCNQL/vwAANQI1Av+/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2acv"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[node name="Carta" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5568901, -0.83058614, 0, 0.83058614, 0.5568901, 0, 0, 0)
+script = ExtResource("1_3jjc3")
+
+[node name="Object" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Object"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0.0362567, 0.01838389, -0.07750553)
+shape = SubResource("BoxShape3D_3jjc3")
+
+[node name="Modelo" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_n4r6d")
+
+[node name="ItemHighlightMesh" type="MeshInstance3D" parent="Modelo"]
+visible = false
+mesh = SubResource("ArrayMesh_p7tcf")
+surface_material_override/0 = SubResource("StandardMaterial3D_u2acv")
+
+[node name="label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 10.0
+anchor_top = 7.2500005
+anchor_right = 17.425001
+anchor_bottom = 8.312
+offset_left = -1.0
+offset_top = 65.99997
+offset_right = -1.000061
+offset_bottom = 66.01999
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://4cngoi84ops"]
+
+[ext_resource type="Script" uid="uid://gixh4yijqcx8" path="res://Interacao/Inventario/InteractableItem.gd" id="1_dux6b"]
+[ext_resource type="ArrayMesh" uid="uid://ddiohvfn7hi15" path="res://Interacao/Inventario/Itens_interagiveis/Carta/obj/Carta_roxa_obj.obj" id="2_5rlmn"]
+[ext_resource type="PackedScene" uid="uid://csdin6obnp0e1" path="res://Interacao/Inventario/Itens_interagiveis/Carta/obj/Carta_roxa_gltf.gltf" id="3_6od04"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3jjc3"]
+size = Vector3(0.35944164, 0.032958984, 0.62307215)
+
+[node name="Carta" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5568901, -0.83058614, 0, 0.83058614, 0.5568901, 0, 0, 0)
+script = ExtResource("1_dux6b")
+
+[node name="Object" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Object"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0.03150016, 0.01838389, -0.072137594)
+shape = SubResource("BoxShape3D_3jjc3")
+
+[node name="Modelo" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_5rlmn")
+
+[node name="ItemHighlightMesh" type="MeshInstance3D" parent="Modelo"]
+visible = false
+
+[node name="blockbench_export" parent="Modelo" instance=ExtResource("3_6od04")]
+transform = Transform3D(1, 0, 0, 0, 0.99876326, 0.04972142, 0, -0.04972142, 0.99876326, 0.0019935966, 0.021993395, 0.014746096)
+
+[node name="label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 10.0
+anchor_top = 7.2500005
+anchor_right = 17.425001
+anchor_bottom = 8.312
+offset_left = -1.0
+offset_top = 65.99997
+offset_right = -1.000061
+offset_bottom = 66.01999
+grow_horizontal = 2
+grow_vertical = 2

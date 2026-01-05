@@ -1,0 +1,298 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6mjt8sleg7gf"]
+
+[ext_resource type="Script" uid="uid://blamkhttwtrce" path="res://Interacao/Inventario/Display_senha/InteractableDisplay.gd" id="1_qh77q"]
+[ext_resource type="Script" uid="uid://w04ebqck3rwv" path="res://Interacao/Inventario/Display_senha/Botoes.gd" id="2_bfj17"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_trj1p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qh77q"]
+albedo_color = Color(0.89059, 0.89059, 0.8905901, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yr5l2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qh77q"]
+size = Vector3(1, 1, 2.4604492)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1n6ws"]
+size = Vector3(0.9428711, 1.4956055, 0.087677)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr5l2"]
+albedo_color = Color(0.72153026, 0.32718313, 0.29644653, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bfj17"]
+material = SubResource("StandardMaterial3D_yr5l2")
+
+[node name="Display" type="Node3D"]
+script = ExtResource("1_qh77q")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.93199193, 0, 0, 0, 1.4766076, 0, 0, 0, 0.08060497, 0.029602468, 0.7532581, 0)
+mesh = SubResource("BoxMesh_trj1p")
+surface_material_override/0 = SubResource("StandardMaterial3D_qh77q")
+
+[node name="Botoes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30545598, 0)
+
+[node name="0" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, -0.24953683, 0.7113006, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "0"
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Botoes/0"]
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/0/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049847007, 0, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="1" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.03257613, 0.7113006, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "1"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Botoes/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4105648, 0, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4201676, 0, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="2" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.31064212, 0.7113006, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "2"
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Botoes/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8008947, 0, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/2/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7873712, 0, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="3" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, -0.24953683, 0.44306523, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "3"
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Botoes/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3411765, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/3/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049246192, -1.3389897, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="4" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.036273345, 0.44306523, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "4"
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Botoes/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4290508, 1.3411765, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/4/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4353517, -1.3389897, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="5" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.31469148, 0.44306523, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "5"
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Botoes/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8211417, 1.3411765, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/5/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.793788, -1.3389897, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="6" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, -0.24953683, 0.17137605, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "6"
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Botoes/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 2.6996226, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/6/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006581545, -2.6917455, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="7" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.036273345, 0.17359948, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "7"
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Botoes/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.429051, 2.6885054, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/7/StaticBody3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4129326, -2.6917455, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="8" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.31469148, 0.18011445, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "8"
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="Botoes/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8211417, 2.6559305, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/8/StaticBody3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7898488, -2.6917455, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="9" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.036273345, -0.09269291, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "9"
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Botoes/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.429051, 4.019967, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/9/StaticBody3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4288794, -3.9677608, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="C" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, -0.24953683, -0.09615064, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/C"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "C"
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="Botoes/C"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1920929e-07, 4.0372562, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/C/StaticBody3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032845497, -3.9677608, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="S" type="MeshInstance3D" parent="Botoes"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.02, 0.31469148, -0.089918435, 0.048858628)
+mesh = SubResource("BoxMesh_yr5l2")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Botoes/S"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91070914)
+pixel_size = 0.02
+text = "<"
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="Botoes/S"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8211417, 4.006095, 0)
+collision_layer = 2
+script = ExtResource("2_bfj17")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Botoes/S/StaticBody3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.785098, -3.9677608, 0.7302246)
+shape = SubResource("BoxShape3D_qh77q")
+
+[node name="Object" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Object"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028564453, 0.75830555, 0.005061269)
+shape = SubResource("BoxShape3D_1n6ws")
+
+[node name="Tela" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.42497247, 0, 0, 0, -8.742278e-09, -0.114014626, 0, 0.2, -4.983738e-09, 0.027734876, 1.2913998, 0.04069966)
+mesh = SubResource("PlaneMesh_bfj17")
+
+[node name="Senha" type="Label3D" parent="Tela"]
+transform = Transform3D(0.5256545, 0, 0, 0, -4.3711406e-08, 0.10000004, 0, -1.7541615, -7.6676825e-09, -0.0050576776, 0.13186577, -0.11041927)
+pixel_size = 0.02
+outline_modulate = Color(0, 0, 0, 0.3137255)
+font_size = 42
+
+[node name="label" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 10.0
+anchor_top = 7.2500005
+anchor_right = 17.425001
+anchor_bottom = 8.312
+offset_left = 412.0
+offset_top = -10.0000305
+offset_right = 411.99994
+offset_bottom = -9.980011
+grow_horizontal = 2
+grow_vertical = 2
